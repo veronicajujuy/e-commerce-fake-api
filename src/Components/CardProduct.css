@@ -1,0 +1,14 @@
+.card-container {
+    width: 258px;
+    height: 472px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card-top {
+    width: 50%;
+}
+.card-top img{
+    width: 100%;
+    object-fit:cover;
+}
