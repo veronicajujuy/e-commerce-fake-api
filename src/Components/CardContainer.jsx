@@ -1,17 +1,22 @@
 import { useContext, useEffect } from "react"
 import { MyContext } from "../GlobalStates/GlobalStates"
 import CardProduct from "./CardProduct"
+import {Link}from "react-router-dom"
+import "./CardContainer.css"
 
 const CardContainer = () => {
     const {products, fetchProducts} = useContext(MyContext)
     useEffect(()=>{
         fetchProducts()
     },[])
-    console.log(products)
+
   return (
-    <div>
+    <div className="container-products">
       {products && products.map(item => 
-        <CardProduct key={item.id} item={item}/>
+        <Link to={`/products/${item.id}`} className="alink">
+            <CardProduct  item={item}/>
+        </Link>
+      
       )}
     </div>
   )

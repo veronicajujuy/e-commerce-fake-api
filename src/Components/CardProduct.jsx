@@ -1,4 +1,5 @@
 import "./CardProduct.css"
+import StarRateComponent from "./StarRateComponent"
 
 const CardProduct = ({item}) => {
   return (
@@ -8,16 +9,16 @@ const CardProduct = ({item}) => {
       </div>
       <div className="card-bottom">
         <div className="title">
-        {item.title}
+            {item.title}
         </div>
         <div className="price">
-            {item.price}
+            $ {item.price}
         </div>
         <div className="category">
             {item.category}
         </div>
         <div className="rate">
-            {item.rating.rate}
+            <StarRateComponent stars={item.rating.rate}/> {item.rating.rate}
         </div>
       </div>
     </div>

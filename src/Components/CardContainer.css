@@ -1,0 +1,12 @@
+.container-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 40px;
+}
+
+.alink {
+    text-decoration: none;
+    color: #000;
+}
